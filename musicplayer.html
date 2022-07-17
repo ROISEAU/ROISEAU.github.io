@@ -73,15 +73,15 @@ body {
 }
 
 #album-name {
-  color: #acaebd;
-  font-size: 13px;
-  font-style: italic;
+  color: #54576f;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #track-name {
-  color: #54576f;
-  font-size: 15px;
-  font-weight: bold;
+  color: #acaebd;
+  font-size: 13px;
+  margin: 2px 0 13px 0;
 }
 
 #track-time {
@@ -320,7 +320,7 @@ body {
 </head>
 <body>
 
-  <br><body style = "font-family:georgia;" ><center><i><font size="7"><b>NOTHING TO FEAR</b></font></i></center></body>
+  <br><center><i><font size="7"><b>NOTHING TO FEAR</b></font></i></center>
   
 <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
 
@@ -329,8 +329,8 @@ body {
   <div id="bg-layer"></div>
   <div id="player">
     <div id="player-track">
+      <div id="album-name"></div>
       <div id="track-name"></div>
-      <div id="album-name"></div><br>
       <div id="track-time">
         <div id="current-time"></div>
         <div id="track-length"></div>
@@ -406,16 +406,16 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "at world's end - rina sawayama",
+      "world's end - rina sawayama",
       "the world ends with you",
-      "Electro Boy",
+      "lady gaga + rina sawayama",
       "Home",
       "Proxy (Original Mix)"
     ],
     trackNames = [
       "WHO'S GONNA SAVE U",
       "BREAKING FREE",
-      "Kaaze - Electro Boy",
+      "FREE WOMAN",
       "Jordan Schor - Home",
       "Martin Garrix - Proxy"
     ],
@@ -423,7 +423,7 @@ $(function () {
     trackUrl = [
       "https://roiseau.github.io/worldsend.mp3",
       "https://roiseau.github.io/breakingfree.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
+      "https://roiseau.github.io/freewoman.mp3",
       "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
       "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
     ],

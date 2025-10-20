@@ -317,12 +317,12 @@ body {
   color: #fff;
 }
 
+  .title { font-family: "Orange Avenue"; }
+
 </style>
   
 </head>
 <body>
-
-    <br><center><p style="color:#626262;"><i><font size="7"><b>NOTHING TO FEAR</b></font></i></p></center>
   
 <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
 
@@ -347,10 +347,6 @@ body {
     <div id="player-content">
       <div id="album-art">
         <img src="https://roiseau.github.io/rinatour.jpg" class="active" id="_1">
-        <img src="https://roiseau.github.io/skullsky.jpg" id="_2">
-        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
         <div id="buffer-box">Buffering ...</div>
       </div>
       <div id="player-controls">
@@ -409,26 +405,14 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "world's end - rina sawayama",
-      "the world ends with you",
-      "lady gaga + rina sawayama",
-      "Home",
-      "Proxy (Original Mix)"
+      "Padonmar - Living Legends"
     ],
     trackNames = [
-      "WHO'S GONNA SAVE U?",
-      "BREAKING FREE",
-      "FREE WOMAN",
-      "Jordan Schor - Home",
-      "Martin Garrix - Proxy"
+      "Flame of Desire"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
-      "https://roiseau.github.io/worldsend.mp3",
-      "https://roiseau.github.io/breakingfree.mp3",
-      "https://roiseau.github.io/freewoman.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
+      "https://roiseau.github.io/Flame of Desire (Sammanakha).mp3"
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),

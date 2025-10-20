@@ -1,6 +1,5 @@
 <html>
 <head>
-  
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'><link rel="stylesheet" href="./style.css">
 <style>
 
@@ -11,7 +10,7 @@
 body {
   font-family: Georgia;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #191919;
   iframe:first-child { display: none !important; };
 }
 
@@ -24,19 +23,11 @@ body {
   height: 100px;
   margin: -4px auto;
 }
-
+  
 #bg-artwork {
-  position: fixed;
-  top: -30px;
-  right: -30px;
-  bottom: -30px;
-  left: -30px;
-  background-color: #000000;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
+  background-color: #0f0f0f;
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
   z-index: 1;
 }
 
@@ -46,11 +37,11 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #0f0f0f;
+  background-color: #191919;
   opacity: 0.5;
   z-index: 2;
 }
-
+  
 #player {
   position: relative;
   height: 100%;
@@ -63,7 +54,7 @@ body {
   right: 15px;
   left: 15px;
   padding: 13px 22px 10px 184px;
-  background-color: #fff7f7;
+  background-color: #252525;
   border-radius: 15px 15px 0 0;
   transition: 0.3s ease top;
   z-index: 1;
@@ -80,8 +71,8 @@ body {
 }
 
 #track-name {
-  color: #0f0f0f;
-  font-size: 13px;
+  color: white;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -101,9 +92,9 @@ body {
 
 #current-time,
 #track-length {
-  color: #f86d92;
+  color: transparent;
   font-size: 11px;
-  background-color: transparent;
+  background-color: #ffe8ee;
   border-radius: 10px;
   transition: 0.3s ease all;
 }fas
@@ -166,8 +157,7 @@ body {
 #player-content {
   position: relative;
   height: 100%;
-  background: #4A4A4A;
-background: radial-gradient(circle, rgba(74, 74, 74, 1) 0%, rgba(28, 28, 28, 1) 100%);
+  background-color: #191919;
   box-shadow: 0 30px 80px #656565;
   border-radius: 15px;
   z-index: 2;
@@ -292,14 +282,14 @@ background: radial-gradient(circle, rgba(74, 74, 74, 1) 0%, rgba(28, 28, 28, 1) 
   width: 26px;
   height: 26px;
   padding: 25px;
-  background-color: #fff;
+  background-color: #191919;
   border-radius: 6px;
   cursor: pointer;
 }
 
 .button i {
   display: block;
-  color: #d6dee7;
+  color: #252525;
   font-size: 26px;
   text-align: center;
   line-height: 1;
@@ -311,30 +301,26 @@ background: radial-gradient(circle, rgba(74, 74, 74, 1) 0%, rgba(28, 28, 28, 1) 
 }
 
 .button:hover {
-  background-color: #d6d6de;
+  background-color: #252525;
 }
 
 .button:hover i {
-  color: #fff;
+  color: #acaebd;
 }
 
-  .title { font-family: "Orange Avenue"; }
-
 </style>
-  
 </head>
 <body>
+
+  <br><center><p style="color:#626262;"><i><font size="7"><b>Flame of Desire</b></font></i></p></center>
   
 <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
 
 <div id="app-cover">
-  <div id="bg-artwork"></div>
-  <div id="bg-layer"></div>
   <div id="player">
     <div id="player-track">
       <div id="track-name"></div>
       <div id="album-name"></div><br>
-      
       <div id="track-time">
         <div id="current-time"></div>
         <div id="track-length"></div>
@@ -377,7 +363,6 @@ background: radial-gradient(circle, rgba(74, 74, 74, 1) 0%, rgba(28, 28, 28, 1) 
 $(function () {
   var playerTrack = $("#player-track"),
     bgArtwork = $("#bg-artwork"),
-    bgArtworkUrl,
     albumName = $("#album-name"),
     trackName = $("#track-name"),
     albumArt = $("#album-art"),
@@ -406,7 +391,7 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "Padonmar - Living Legends"
+      "Padonmar • Living Legends"
     ],
     trackNames = [
       "Flame of Desire"
